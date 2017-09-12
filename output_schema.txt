@@ -1,0 +1,7 @@
+seg_id boundary
+int str
+pick_id plat plon page_ck ridge_side
+int double double double str
+int double double double str
+int double double double str
+etc...
