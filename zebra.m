@@ -564,7 +564,7 @@ function pushbutton_output_segment_Callback(hObject, eventdata, handles)
     fprintf('Writing data on segment %d to %s\n',seg_id,filename);
     output = segment_output(handles.selected_segment,handles);
     fhandle = fopen(filename,'w');
-    fprintf(fhandle,output);
+    fprintf(fhandle,output{1});
     fclose(fhandle);
 end
 
