@@ -16,9 +16,10 @@ function polygon = flowline_polygon(seg_id,handles)
     npoints = length(flow.lat);
 
     displacement1 = center - [lat1 lon1];
-    flow1 = horzcat(flow.lat(2:npoints),flow.lon(2:npoints)) + displacement1;
+    
+    flow1 = horzcat(flow.lat(2:npoints) + displacement1(1),flow.lon(2:npoints) + displacement1(2) );
     displacement2 = center - [lat2 lon2];
-    flow2 = horzcat(flow.lat(2:npoints),flow.lon(2:npoints)) + displacement2;
+    flow2 = horzcat(flow.lat(2:npoints) + displacement2(1),flow.lon(2:npoints) + displacement2(2) );
 
     flow2 = flipud(flow2);
 
